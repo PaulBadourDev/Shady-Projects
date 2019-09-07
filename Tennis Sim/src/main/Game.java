@@ -20,6 +20,11 @@ public class Game {
 		JPanel secondBaseline = new JPanel();
 		JPanel firstAlley = new JPanel();
 		JPanel secondAlley = new JPanel();
+		JPanel firstNotch = new JPanel();
+		JPanel secondNotch = new JPanel();
+		JPanel firstService = new JPanel();
+		JPanel secondService = new JPanel();
+		JPanel center = new JPanel();
 		
 		// Window Setup
 		window.setSize(1100, 700);
@@ -64,8 +69,32 @@ public class Game {
 		secondAlley.setBackground(Color.WHITE);
 		secondAlley.setBounds(150, 465, 780, 5);
 		
+		// Left Notch
+		firstNotch.setBackground(Color.WHITE);
+		firstNotch.setBounds(150, 320, 25, 5);
+		
+		// Right Notch
+		secondNotch.setBackground(Color.WHITE);
+		secondNotch.setBounds(910, 320, 20, 5);
+		
+		// Left Service
+		firstService.setBackground(Color.WHITE);
+		firstService.setBounds(320, 195, 5, 270);
+		
+		// Right Service
+		secondService.setBackground(Color.WHITE);
+		secondService.setBounds(740, 195, 5, 270);
+		
+		// Center Service Line
+		center.setBackground(Color.WHITE);
+		center.setBounds(320, 320, 420, 5);
 		
 		window.add(net);
+		window.add(center);
+		window.add(secondService);
+		window.add(firstService);
+		window.add(secondNotch);
+		window.add(firstNotch);
 		window.add(firstAlley);
 		window.add(secondAlley);
 		window.add(secondBaseline);
@@ -80,21 +109,6 @@ public class Game {
 	Game() {
 		setupCourt();
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 	
 	public static void main(String args[]) {
