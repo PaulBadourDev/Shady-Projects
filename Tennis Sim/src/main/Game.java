@@ -1,7 +1,6 @@
 package main;
 
 import java.awt.Color;
-import java.awt.FlowLayout;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -10,11 +9,17 @@ public class Game {
 	
 	private JFrame window = new JFrame("Tennis Simulator");
 	
-	private void setupCourt() { //                             78 / 36
+	private void setupCourt() {
 		
 		JPanel background = new JPanel();
 		JPanel courtGround = new JPanel();
 		JPanel net = new JPanel();
+		JPanel firstSideline = new JPanel();
+		JPanel secondSideline = new JPanel();
+		JPanel firstBaseline = new JPanel();
+		JPanel secondBaseline = new JPanel();
+		JPanel firstAlley = new JPanel();
+		JPanel secondAlley = new JPanel();
 		
 		// Window Setup
 		window.setSize(1100, 700);
@@ -28,18 +33,45 @@ public class Game {
 		background.setBounds(0, 0, 1100, 700);
 		
 		// Green Court Ground
-		courtGround.setLayout(new FlowLayout());
 		courtGround.setBackground(new Color(3, 154, 3));
-		courtGround.setBounds(150, 150, 780, 360);
-		
+		courtGround.setBounds(150, 150, 780, 360); // 78 : 36
 		
 		// Net
-		net.setLayout(new FlowLayout());
 		net.setBackground(Color.LIGHT_GRAY);
 		net.setBounds(535, 150, 5, 360);
 		
+		// Top Sideline
+		firstSideline.setBackground(Color.WHITE);
+		firstSideline.setBounds(150, 150, 780, 5);
+		
+		// Bottom Sideline
+		secondSideline.setBackground(Color.WHITE);
+		secondSideline.setBounds(150, 510, 780, 5);
+		
+		// Left Baseline
+		firstBaseline.setBackground(Color.WHITE);
+		firstBaseline.setBounds(150, 150, 5, 360);
+		
+		// Right Baseline
+		secondBaseline.setBackground(Color.WHITE);
+		secondBaseline.setBounds(930, 150, 5, 365);
+		
+		// Top Alley
+		firstAlley.setBackground(Color.WHITE);
+		firstAlley.setBounds(150, 195, 780, 5);
+		
+		// Bottom Alley
+		secondAlley.setBackground(Color.WHITE);
+		secondAlley.setBounds(150, 465, 780, 5);
+		
 		
 		window.add(net);
+		window.add(firstAlley);
+		window.add(secondAlley);
+		window.add(secondBaseline);
+		window.add(firstBaseline);
+		window.add(secondSideline);
+		window.add(firstSideline);
 		window.add(courtGround);
 		window.add(background);
 	}
