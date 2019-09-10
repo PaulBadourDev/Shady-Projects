@@ -8,6 +8,7 @@ import javax.swing.JPanel;
 public class Game {
 	
 	private JFrame window = new JFrame("Tennis Simulator");
+	private JPanel background = new JPanel();
 	
 	private void setupCourt() {
 		
@@ -107,6 +108,8 @@ public class Game {
 	
 	
 	Game() {
+		
+		
 		setupCourt();
 	}
 	
