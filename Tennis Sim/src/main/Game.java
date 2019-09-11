@@ -9,6 +9,7 @@ public class Game {
 	
 	private JFrame window = new JFrame("Tennis Simulator");
 	private JPanel background = new JPanel();
+	private Player pOne = new Player();
 	
 	private void setupCourt() {
 		
@@ -32,6 +33,7 @@ public class Game {
 		window.setLayout(null);
 		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		window.setLocationRelativeTo(null);
+		window.setResizable(false);
 		window.setVisible(true);
 		
 		// Background
@@ -90,6 +92,11 @@ public class Game {
 		center.setBackground(Color.WHITE);
 		center.setBounds(320, 320, 420, 5);
 		
+		pOne.setBackground(Color.RED);
+		pOne.setBounds(550, 350, 340, 340);
+		
+		window.add(pOne);
+		
 		window.add(net);
 		window.add(center);
 		window.add(secondService);
@@ -108,7 +115,6 @@ public class Game {
 	
 	
 	Game() {
-		
 		
 		setupCourt();
 	}
