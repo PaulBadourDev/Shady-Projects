@@ -117,6 +117,15 @@ public class Game {
 	Game() {
 		
 		setupCourt();
+		try {
+			Thread.sleep(200);
+		} catch (InterruptedException e) {
+			
+		} finally {
+			
+		}
+		
+		pOne.move(50, 50);
 	}
 	
 	

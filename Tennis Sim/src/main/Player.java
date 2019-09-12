@@ -15,7 +15,8 @@ public class Player extends JPanel{
 	
 	public void paint(Graphics g){
 		g.setColor(Color.RED);
-		g.drawOval(posx, posy, 100, 100);					
+		g.drawOval(0, 0, 100, 100);
+		g.fillOval(0, 0, 100, 100);
 	}
 	
 	public void move(int x, int y) {
