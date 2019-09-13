@@ -93,7 +93,7 @@ public class Game {
 		center.setBounds(320, 320, 420, 5);
 		
 		pOne.setBackground(Color.RED);
-		pOne.setBounds(550, 350, 340, 340);
+		pOne.setBounds(550, 350, 200, 2);
 		
 		window.add(pOne);
 		
@@ -117,15 +117,10 @@ public class Game {
 	Game() {
 		
 		setupCourt();
-		try {
-			Thread.sleep(200);
-		} catch (InterruptedException e) {
-			
-		} finally {
-			
-		}
+		pOne.move(100, 100);
 		
-		pOne.move(50, 50);
+		
+		pOne.move(400, 400);
 	}
 	
 	
